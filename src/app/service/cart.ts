@@ -10,6 +10,9 @@ export class Cart {
   addToCard(product: Product) {
     this.cart.set([...this.cart(), product]);
   }
+  removeFromCard(id: number) {
+    this.cart.set(this.cart().filter((p) => p.id !== id));
+  }
 
   constructor() {}
 }

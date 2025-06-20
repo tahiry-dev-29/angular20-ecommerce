@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { Header } from './components/header/header';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header],
+  imports: [Header, RouterOutlet],
   template: `
     <app-header />
 
@@ -12,6 +12,4 @@ import { Header } from './components/header/header';
   `,
   styleUrl: './app.css',
 })
-export class App {
-  protected title = 'ng20-ecommerce';
-}
+export class App {}
