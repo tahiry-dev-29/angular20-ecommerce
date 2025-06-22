@@ -14,7 +14,10 @@ import { RouterLink } from '@angular/router';
       @for (item of serviceCart.cart(); track $index) {
       <app-cart-items [item]="item" />
       }@empty {
-      <div class="col-span-full flex justify-center items-center">
+      <div
+        class="col-span-full flex flex-col gap-2.5 mt-10 justify-center items-center"
+      >
+        <p>Your hopping cart is empty</p>
         <app-button
           routerLink="/"
           label="Add Product"

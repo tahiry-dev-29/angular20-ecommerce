@@ -28,8 +28,7 @@ import { InputComponent } from '../input/input';
               [min]="1"
               [max]="product().stock"
               [step]="1"
-              [value]="quantity()"
-              (valueChange)="onQuantityChange($event)"
+              [(value)]="quantity"
             />
           </div>
 
@@ -64,9 +63,9 @@ export class ProductCard {
 
   quantity = signal(1);
 
-  onQuantityChange(value: string | number): void {
-    this.quantity.set(Number(value));
-  }
+  // onQuantityChange(value: string | number): void {
+  //   this.quantity.set(Number(value));
+  // }
 
   onAddToCart(): void {
     this.serviceCart.addToCard(this.product(), this.quantity());

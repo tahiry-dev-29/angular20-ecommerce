@@ -26,7 +26,7 @@ import { InputComponent } from '../../../components/input/input';
         [min]="1"
         [max]="item().stock"
         [step]="1"
-        [value]="item().quantity"
+        [(value)]="item().quantity"
         [disabled]="item().stock === 0"
         (valueChange)="onQuantityChange($event)"
       />
@@ -45,7 +45,7 @@ export class CartItems {
   item = input.required<Product>();
   readonly serviceCart = inject(Cart);
 
-  onQuantityChange(newQuantity: string | number): void {
+  onQuantityChange(newQuantity: string | number | undefined): void {
     const quantityAsNumber = Number(newQuantity);
     if (!isNaN(quantityAsNumber) && quantityAsNumber > 0) {
       this.serviceCart.updateQuantity(this.item().id, quantityAsNumber);

@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input, model, output } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -19,22 +19,15 @@ import { Component, input, output } from '@angular/core';
 export class InputComponent {
   type = input.required<string>(); // 'number' | 'text' | 'email' | 'password'
   placeholder = input<string>('');
-  value = input<number | string | undefined>(undefined);
   disabled = input<boolean>(false);
   min = input<number>();
   max = input<number>();
   step = input<number>();
 
-  valueChange = output<number | string>();
+  value = model<number | string>();
 
   onInput(event: Event): void {
     const inputValue = (event.target as HTMLInputElement).value;
-    let finalValue: number | string = inputValue;
-
-    if (this.type() === 'number') {
-      finalValue = inputValue === '' ? 0 : parseFloat(inputValue);
-    }
-
-    this.valueChange.emit(finalValue);
+    this.value.set(this.type() === 'number' ? Number(inputValue) : inputValue);
   }
 }
