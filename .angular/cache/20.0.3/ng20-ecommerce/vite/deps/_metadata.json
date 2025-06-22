@@ -1,43 +1,34 @@
 {
-  "hash": "d0642ecf",
-  "configHash": "2311ffac",
+  "hash": "1b26638a",
+  "configHash": "7eb31421",
   "lockfileHash": "061c8a78",
-  "browserHash": "39855bff",
+  "browserHash": "c728026e",
   "optimized": {
     "@angular/core": {
       "src": "../../../../../../node_modules/.pnpm/@angular+core@20.0.4_@angular+compiler@20.0.4_rxjs@7.8.2/node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "8d798bcb",
-      "needsInterop": false
-    },
-    "@angular/forms": {
-      "src": "../../../../../../node_modules/.pnpm/@angular+forms@20.0.4_@angular+common@20.0.4_@angular+core@20.0.4_@angular+compiler@20._2b8d6d88e0684039bf7fe95d8732ddbf/node_modules/@angular/forms/fesm2022/forms.mjs",
-      "file": "@angular_forms.js",
-      "fileHash": "58b7cb05",
+      "fileHash": "d847d5cf",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/.pnpm/@angular+platform-browser@20.0.4_@angular+common@20.0.4_@angular+core@20.0.4_@angular+c_6b59ff6b467cae34c3783e3dcf6f9a90/node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "56d7c2c8",
+      "fileHash": "2beffa27",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/.pnpm/@angular+router@20.0.4_@angular+common@20.0.4_@angular+core@20.0.4_@angular+compiler@20_07e8d910aab5a025cce28f6f73916698/node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "cf268038",
+      "fileHash": "58310d38",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-6ACNP4SG": {
-      "file": "chunk-6ACNP4SG.js"
+    "chunk-WINC6VNZ": {
+      "file": "chunk-WINC6VNZ.js"
     },
-    "chunk-5ZO7ETDN": {
-      "file": "chunk-5ZO7ETDN.js"
-    },
-    "chunk-GM4NVUKH": {
-      "file": "chunk-GM4NVUKH.js"
+    "chunk-BXRSWHGF": {
+      "file": "chunk-BXRSWHGF.js"
     }
   }
 }
