@@ -10,7 +10,9 @@ import { Button } from '../button/button';
     <div
       class="flex justify-between items-center bg-slate-100 px-4 py-4 shadow-md"
     >
-      <span routerLink="/" class="font-bold cursor-pointer text-3xl"
+      <span
+        routerLink="/"
+        class="font-bold cursor-pointer text-3xl text-blue-500/90"
         >My Store</span
       >
       <app-button

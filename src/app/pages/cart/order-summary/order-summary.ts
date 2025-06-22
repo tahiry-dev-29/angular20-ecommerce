@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { Button } from '../../../components/button/button';
 import { Cart } from '../../../service/cart';
 
@@ -20,13 +20,7 @@ import { Cart } from '../../../service/cart';
 export class OrderSummary {
   readonly serviceCart = inject(Cart);
 
-  total = computed(() => {
-    let total = 0;
-    for (const item of this.serviceCart.cart()) {
-      total += item.price;
-    }
-    return total;
-  });
+  total = computed<number>(() => this.serviceCart.total());
 
   alert() {
     alert('Thancks !!!!');

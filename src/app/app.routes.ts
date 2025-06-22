@@ -5,13 +5,22 @@ import { ProductList } from './pages/product-list/product-list';
 export const routes: Routes = [
   {
     path: '',
-    title: 'Product List',
     pathMatch: 'full',
+    redirectTo: 'products',
+  },
+  {
+    path: 'products',
+    title: 'Product List',
     component: ProductList,
   },
   {
-    title: 'Cart',
     path: 'cart',
+    title: 'Cart',
     component: CartComponent,
+  },
+  {
+    path: '**',
+    loadComponent: () =>
+      import('./pages/not-found/not-found').then((m) => m.NotFound),
   },
 ];

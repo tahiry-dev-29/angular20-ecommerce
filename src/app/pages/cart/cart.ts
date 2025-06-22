@@ -15,7 +15,11 @@ import { RouterLink } from '@angular/router';
       <app-cart-items [item]="item" />
       }@empty {
       <div class="col-span-full flex justify-center items-center">
-        <app-button routerLink="/" label="Add Product" color="bg-green-500" />
+        <app-button
+          routerLink="/"
+          label="Add Product"
+          color="bg-green-500 text-white"
+        />
       </div>
       } @if (serviceCart.cart().length) {
       <app-order-summary />
